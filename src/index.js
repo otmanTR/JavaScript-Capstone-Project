@@ -1,1 +1,1 @@
-import 'index.css';
+require('./index.css');

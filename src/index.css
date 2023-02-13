@@ -1,8 +1,14 @@
 .flex {
-    display: flex;
+  display: flex;
 }
 
 .navigationItems {
-    list-style-type: none;
-    flex-direction: column;
+  list-style-type: none;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+.navigationItems li {
+}
+.footer-text {
+  text-transform: capitalize;
 }

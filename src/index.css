@@ -1,0 +1,8 @@
+.flex {
+    display: flex;
+}
+
+.navigationItems {
+    list-style-type: none;
+    flex-direction: column;
+}

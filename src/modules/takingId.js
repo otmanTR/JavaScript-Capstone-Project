@@ -2,13 +2,13 @@ const takingId = async () => {
   const apiUrl = 'https://pokeapi.co/api/v2/pokemon/ditto';
 
   const action = {
-    method: 'POST',
+    method: 'GET',
     headers: {
       'Content-Type': 'application/json',
     },
-    body: JSON.stringify({
-      name: 'game of Pokemon',
-    }),
+    // body: JSON.stringify({
+    //   name: 'game of Pokemon',
+    // }),
   };
   const takeId = await fetch(apiUrl, action);
   const result = await takeId.json();

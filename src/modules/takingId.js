@@ -1,21 +1,14 @@
 const takingId = async () => {
-  const apiUrl = 'https://pokeapi.co/api/v2/pokemon/ditto';
+  const apiUrl = 'https://pokeapi.co/api/v2/';
 
-  const action = {
-    method: 'GET',
-    headers: {
-      'Content-Type': 'application/json',
-    },
-    // body: JSON.stringify({
-    //   name: 'game of Pokemon',
-    // }),
-  };
-  const takeId = await fetch(apiUrl, action);
+  // fetch('https://example.com', {
+  //   credentials: 'same-origin'
+  // });
+  const takeId = await fetch(apiUrl);
   const result = await takeId.json();
-  const answer = await result.result;
-  console.log(answer);
-  return answer;
-  return apiUrl;
+
+  console.log(result);
+  return result;
 };
 
-export default takingId;
+module.exports = takingId;

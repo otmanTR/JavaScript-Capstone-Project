@@ -1,3 +1,4 @@
 require('./index.css');
-require("./modules/takingId.js");
+const takeID = require('./modules/takingId');
 
+takeID();

@@ -78,6 +78,7 @@ main {
 .containerPopUp {
   flex-direction: row;
 }
+
 .btn {
   align-items: center;
   justify-content: center;

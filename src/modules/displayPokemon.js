@@ -12,17 +12,17 @@ const displayPokemon = (list) => {
               class="card-img"
             />
           </div>
-            <div class="card-body">
+            <div class="card-body flex">
             <p>${pokemon.name}</p>
             <div class="likes-container">
-              <button type=" button" class="btn">
+              <button type=" button" class="btn flex">
                 <i class="fa-regular fa-heart"></i>
               </button>
               <h5 class="likes">0 likes</h5>
             </div>
           </div>
           <div class="card-footer flex">
-            <button type=" button" class="btn-comment btn">comments</button>
+            <button type=" button" class="btn-comment btn flex">comments</button>
           </div>
         </article>`,
     )

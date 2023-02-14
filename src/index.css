@@ -52,7 +52,7 @@ main {
 }
 
 .card-body {
-  display: flex;
+  /* display: flex; */
   justify-content: space-between;
   align-items: center;
 }
@@ -62,7 +62,7 @@ main {
 }
 
 .btn {
-  display: flex;
+  /* display: flex; */
   align-items: center;
   justify-content: center;
   background: transparent;

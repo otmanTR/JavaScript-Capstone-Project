@@ -11,4 +11,4 @@ const takingId = async () => {
   return result;
 };
 
-module.exports = takingId;
+export default takingId;

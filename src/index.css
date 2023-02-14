@@ -55,3 +55,11 @@ main {
 .card-footer {
   align-items: center;
 }
+
+.popUp {
+  width: 100%;
+}
+
+.popUpTitle {
+  text-transform: capitalize;
+}

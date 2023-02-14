@@ -1,4 +1,4 @@
-require('./index.css');
-const takeID = require('./modules/takingId');
+import './index.css';
+import getPokemon from './modules/getPokemon';
 
-takeID();
+window.addEventListener('DOMContentLoaded', getPokemon);

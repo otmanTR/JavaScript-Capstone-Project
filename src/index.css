@@ -63,3 +63,7 @@ main {
 .popUpTitle {
   text-transform: capitalize;
 }
+
+.popUpProperties {
+  text-transform: capitalize;
+}

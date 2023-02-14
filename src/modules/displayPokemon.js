@@ -5,7 +5,7 @@ const displayPokemon = (list) => {
       (pokemon, index) => ` <article class="card">
           <div class="card-header">
             <img
-              src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${
+              src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${
   index + 1
 }.png"
               alt="pitto"

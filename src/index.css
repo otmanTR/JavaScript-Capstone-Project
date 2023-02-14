@@ -67,3 +67,11 @@ main {
 .popUpProperties {
   text-transform: capitalize;
 }
+
+.close {
+  display: none;
+}
+
+.open {
+  display: block;
+}

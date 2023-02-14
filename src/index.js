@@ -1,6 +1,9 @@
+import PopUp from './modules/popUpFunction';
+
 require('./index.css');
-const takeID = require('./modules/takingId');
+// const takeID = require('./modules/takingId');
 
-takeID();
+// const body = document.querySelector('.body');
 
-
+PopUp = new PopUp();
+PopUp();

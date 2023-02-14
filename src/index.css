@@ -23,7 +23,6 @@
 
 main {
   min-height: calc(100vh - 4rem);
-  display: flex;
   justify-content: center;
 }
 
@@ -52,7 +51,6 @@ main {
 }
 
 .card-body {
-  /* display: flex; */
   justify-content: space-between;
   align-items: center;
 }
@@ -62,7 +60,6 @@ main {
 }
 
 .btn {
-  /* display: flex; */
   align-items: center;
   justify-content: center;
   background: transparent;

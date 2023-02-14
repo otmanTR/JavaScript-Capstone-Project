@@ -72,6 +72,6 @@ main {
   display: none;
 }
 
-.open {
-  display: block;
+.containerPopUp {
+  flex-direction: row;
 }

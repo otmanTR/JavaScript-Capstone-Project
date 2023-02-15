@@ -1,3 +1,5 @@
+import popUpFunction from './popUpFunction';
+
 const pokemonContainer = document.querySelector('.pokemon-container');
 const displayPokemon = (list) => {
   const pokemonlist = list
@@ -22,11 +24,13 @@ const displayPokemon = (list) => {
             </div>
           </div>
           <div class="card-footer flex">
-            <button type=" button" class="btn-comment btn flex">comments</button>
+            <button type=" button" id="${index + 1}" class="btn-comment btn flex">comments</button>
           </div>
         </article>`,
     )
     .join('');
   pokemonContainer.innerHTML = pokemonlist;
+  const commentButton = document.querySelectorAll('.btn-comment');
+  popUpFunction(commentButton);
 };
 export default displayPokemon;

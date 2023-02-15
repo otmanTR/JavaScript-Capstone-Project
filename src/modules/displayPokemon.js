@@ -1,3 +1,4 @@
+import createLike from './createLike';
 import popUpFunction from './popUpFunction';
 
 const pokemonContainer = document.querySelector('.pokemon-container');
@@ -10,27 +11,33 @@ const displayPokemon = (list) => {
               src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${
   index + 1
 }.png"
-              alt="pitto"
+              alt="${pokemon.name}"
               class="card-img"
             />
           </div>
             <div class="card-body flex">
             <p>${pokemon.name}</p>
             <div class="likes-container">
-              <button type=" button" class="btn flex">
+              <button type=" button" class="btn flex like-btn" id="${
+  pokemon.name
+}">
                 <i class="fa-regular fa-heart"></i>
               </button>
-              <h5 class="likes">0 likes</h5>
+              <h5 class="likes" data-id="${pokemon.name}">0 likes</h5>
             </div>
           </div>
           <div class="card-footer flex">
-            <button type=" button" id="${index + 1}" class="btn-comment btn flex">comments</button>
+            <button type=" button" id="${
+  index + 1
+}" class="btn-comment btn flex">comments</button>
           </div>
         </article>`,
     )
     .join('');
   pokemonContainer.innerHTML = pokemonlist;
   const commentButton = document.querySelectorAll('.btn-comment');
+  const likeButton = document.querySelectorAll('.like-btn');
   popUpFunction(commentButton);
+  createLike(likeButton);
 };
 export default displayPokemon;

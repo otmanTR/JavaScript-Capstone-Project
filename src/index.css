@@ -6,14 +6,25 @@
   box-sizing: border-box;
 }
 
+.body {
+  font-family:cursive;
+  background-color: rgb(155, 226, 174);
+}
+
 .flex {
   display: flex;
+}
+
+.navigationBar {
+  display: flex;
+  flex-direction: column;
 }
 
 .navigationItems {
   list-style-type: none;
   flex-direction: row;
   justify-content: space-evenly;
+  margin-top: 50px;
 }
 
 .footer-text {
@@ -60,7 +71,20 @@ main {
 }
 
 .popUp {
+  display: flex;
   width: 100%;
+  flex-direction: column;
+  align-items: center;
+  margin: 30px
+}
+
+.popUpXButton {
+  height: 50px;
+  width: 10%;
+  margin-top: 50px;
+  margin-right: 50px;
+  color: rgb(54, 3, 22);
+  background-color: rgba(187, 205, 137, 0.897);
 }
 
 .popUpTitle {
@@ -73,10 +97,6 @@ main {
 
 .close {
   display: none;
-}
-
-.containerPopUp {
-  flex-direction: row;
 }
 
 .btn {
@@ -109,4 +129,8 @@ main {
 
 .likes-container h5 {
   text-transform: capitalize;
+}
+
+.containerPopUp {
+  background-color: rgb(175, 220, 219) ;
 }

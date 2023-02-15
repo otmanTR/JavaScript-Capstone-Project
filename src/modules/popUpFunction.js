@@ -33,8 +33,20 @@ const popUpFunction = (commentButton) => {
   <li class="power">baseexperience
 :${data.base_experience}</li>
 </ul>
-</div>`;
-
+</div>    <form class="commentForm">
+<h2 class="formTitle">Add a comment</h2>
+<ul class="formContainer">
+  <li>
+    <input minlength="1" maxlength="30" class="name" type="text" name="name" placeholder="Your name" required/>
+  </li>
+  <li>
+    <input minlength="1" maxlength="150" class="insights" type="text" name="insights" placeholder="Your insights" required/>
+  </li>
+  <li>
+    <button class="commentButton button" type="submit">Comment</button>
+  </li>
+</ul>
+</form>`;
             popUp.innerHTML = popUpItems;
           },
         );

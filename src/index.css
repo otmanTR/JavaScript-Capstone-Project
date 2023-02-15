@@ -148,3 +148,7 @@ main {
 .formContainer {
   list-style-type: none;
 }
+
+.show {
+  display: block;
+}

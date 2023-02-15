@@ -1,10 +1,6 @@
-import popUpFunction from './popUpFunction';
-
-popUpFunction();
-
 class Comments {
   constructor() {
-    this.url = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/BAapi/comments';
+    this.url = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/Kumd2xEuWrRQPQTt2JCG/comments';
   }
 
   apiFetch = async () => {
@@ -16,15 +12,32 @@ class Comments {
       insights,
     }));
     return allComments;
+    // console.log('comments here', allComments);
   }
 
-  addNewComment= async (name, insights) => {
+  addNewComment= async (item_id, username, comment) => {
     await fetch(this.url, {
       method: 'POST',
-      body: JSON.stringify({ user: name, insights }),
+      body: JSON.stringify({ item_id, username, comment }),
       headers: {
         'Content-Type': 'application/json; charset=UTF-8',
       },
+    });
+  }
+
+  displayComments = async () => {
+    const commentsList = document.querySelector('.commentList');
+    // commentsList = '';
+    const data = await this.apiFetch();
+    // console.log("data here", data);
+    if (this.url > 0) {
+      commentsList.classList.add('show');
+    }
+    data.forEach((element) => {
+      const content = `
+        <li class="scoreItem">${element.name} <span>: <span>${element.insights}</li>
+      `;
+      commentsList.innerHTML += content;
     });
   }
 }

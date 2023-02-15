@@ -1,4 +1,5 @@
 import getItems from './getItems';
+import Comments from './comments';
 
 const popUp = document.querySelector('.popUp');
 popUp.innerHTML = '';
@@ -33,7 +34,10 @@ const popUpFunction = (commentButton) => {
   <li class="power">baseexperience
 :${data.base_experience}</li>
 </ul>
-</div>    <form class="commentForm">
+</div> 
+<h3 class="commentsCount">Comments(4)</h3>
+<ul class="commentsList"></ul>
+<form class="commentForm">
 <h2 class="formTitle">Add a comment</h2>
 <ul class="formContainer">
   <li>
@@ -43,7 +47,7 @@ const popUpFunction = (commentButton) => {
     <input minlength="1" maxlength="150" class="insights" type="text" name="insights" placeholder="Your insights" required/>
   </li>
   <li>
-    <button class="commentButton button" type="submit">Comment</button>
+    <button class="submitButton button" type="submit">Comment</button>
   </li>
 </ul>
 </form>`;
@@ -63,5 +67,19 @@ const popUpFunction = (commentButton) => {
       popUpXButton.classList.add('close');
     });
   });
+  const comments = new Comments();
+  const submitButton = document.querySelector('.submitButton');
+
+  submitButton.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const name = document.querySelector('.name');
+    const insights = document.querySelector('.insights');
+    if (name.value !== '' && insights.value !== '') {
+      comments.addNewComment( name.value, insights.value);
+    }
+    name.value = '';
+    insights.value = '';
+  });
+  comments.displayComments();
 };
 export default popUpFunction;

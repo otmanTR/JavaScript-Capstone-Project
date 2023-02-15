@@ -134,3 +134,9 @@ main {
 .containerPopUp {
   background-color: rgb(175, 220, 219);
 }
+
+.like-btn {
+  color: red;
+  background: transparent;
+  border: none;
+}

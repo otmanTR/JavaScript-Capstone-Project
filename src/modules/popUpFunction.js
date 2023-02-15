@@ -35,7 +35,7 @@ const popUpFunction = (commentButton) => {
 </ul>
 </div>`;
 
-            popUp.innerHTML += popUpItems;
+            popUp.innerHTML = popUpItems;
           },
         );
       };

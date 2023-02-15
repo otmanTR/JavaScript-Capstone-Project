@@ -134,3 +134,11 @@ main {
 .containerPopUp {
   background-color: rgb(175, 220, 219);
 }
+
+.commentForm {
+  margin-top: 30px;
+}
+
+.formContainer {
+  list-style-type: none;
+}

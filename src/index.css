@@ -150,6 +150,10 @@ main {
   list-style-type: none;
 }
 
+.show {
+  display: block;
+}
+
 .item-count {
   text-align: center;
   text-transform: capitalize;

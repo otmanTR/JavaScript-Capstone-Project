@@ -1,3 +1,4 @@
 # Valid
-/root/src/*.js
+*.js
 babel.config.js
+index.js

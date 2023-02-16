@@ -52,7 +52,24 @@ const popUpFunction = (commentButton) => {
 </ul>
 </form>`;
             popUp.innerHTML = popUpItems;
+            const itemId = data.name;
+
+            const comments = new Comments();
+            const submitButton = document.querySelector('.commentForm');
+
+            submitButton.addEventListener('submit', (e) => {
+              e.preventDefault();
+              const name = document.querySelector('.name');
+              const insights = document.querySelector('.insights');
+              if (name.value !== '' && insights.value !== '') {
+                comments.addNewComment(itemId, name.value, insights.value);
+              }
+              name.value = '';
+              insights.value = '';
+            });
+            comments.displayComments();
           },
+
         );
       };
       getName();
@@ -67,19 +84,5 @@ const popUpFunction = (commentButton) => {
       popUpXButton.classList.add('close');
     });
   });
-  const comments = new Comments();
-  const submitButton = document.querySelector('.submitButton');
-
-  submitButton.addEventListener('submit', (e) => {
-    e.preventDefault();
-    const name = document.querySelector('.name');
-    const insights = document.querySelector('.insights');
-    if (name.value !== '' && insights.value !== '') {
-      comments.addNewComment( name.value, insights.value);
-    }
-    name.value = '';
-    insights.value = '';
-  });
-  comments.displayComments();
 };
 export default popUpFunction;

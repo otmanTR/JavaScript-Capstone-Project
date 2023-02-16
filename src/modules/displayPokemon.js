@@ -1,6 +1,9 @@
 import createLike from './createLike';
+import displayLikeCount from './displayLikeCount';
+import { displayItemCount } from './getItemCount';
 import popUpFunction from './popUpFunction';
 
+const itemCount = document.querySelector('.item-count');
 const pokemonContainer = document.querySelector('.pokemon-container');
 const displayPokemon = (list) => {
   const pokemonlist = list
@@ -23,7 +26,7 @@ const displayPokemon = (list) => {
 }">
                 <i class="fa-regular fa-heart"></i>
               </button>
-              <h5 class="likes" data-id="${pokemon.name}">0 likes</h5>
+              <h5 class="likes" data-id="${pokemon.name}"></h5>
             </div>
           </div>
           <div class="card-footer flex">
@@ -37,7 +40,10 @@ const displayPokemon = (list) => {
   pokemonContainer.innerHTML = pokemonlist;
   const commentButton = document.querySelectorAll('.btn-comment');
   const likeButton = document.querySelectorAll('.like-btn');
+  const likeCount = document.querySelectorAll('.likes');
   popUpFunction(commentButton);
-  createLike(likeButton);
+  createLike(likeButton, likeCount);
+  displayLikeCount(likeCount);
+  displayItemCount(itemCount, list);
 };
 export default displayPokemon;

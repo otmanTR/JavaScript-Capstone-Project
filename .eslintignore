@@ -1,5 +1,2 @@
 # Valid
-babel.config.js
-index.js
-addComment.js
-comments.js
+/root/src/*.js

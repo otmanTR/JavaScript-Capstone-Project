@@ -1,4 +1,2 @@
 # Valid
-*.js
-babel.config.js
-index.js
+/*.js

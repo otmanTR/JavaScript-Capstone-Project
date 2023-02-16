@@ -15,9 +15,9 @@ class Comments {
     // }));
     // console.log('comments here', allComments);
     return fResult;
-  }
+  };
 
-  addNewComment= async (itemId, username, comment) => {
+  addNewComment = async (itemId, username, comment) => {
     await fetch(this.url, {
       method: 'POST',
       body: JSON.stringify({ item_id: itemId, username, comment }),
@@ -25,24 +25,22 @@ class Comments {
         'Content-Type': 'application/json; charset=UTF-8',
       },
     });
-  }
+  };
 
-  displayComments = async () => {
-    getItems();
-    const commentsList = document.querySelector('.commentList');
-    // commentsList = '';
-    const data = await this.apiFetch();
-    // console.log("data here", data);
-    if (this.url > 0) {
-      commentsList.classList.add('show');
-    }
-    data.forEach((element) => {
-      const content = `
+  displayComments = async (commentList, itemId) => {
+    const commentsUrl = `https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/Kumd2xEuWrRQPQTt2JCG/comments?item_id=${itemId}`;
+    getItems(commentsUrl).then((data) => {
+      if (!data.error) {
+        commentList.classList.add('show');
+        const content = data
+          .map((element) => `
         <li class="scoreItem">${element.username} <span>: <span>${element.comment}</li>
-      `;
-      commentsList.innerHTML += content;
+       `)
+          .join('');
+        commentList.innerHTML = content;
+      }
     });
-  }
+  };
 }
 
 export default Comments;

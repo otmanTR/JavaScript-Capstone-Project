@@ -56,6 +56,7 @@ const popUpFunction = (commentButton) => {
 
             const comments = new Comments();
             const submitButton = document.querySelector('.commentForm');
+            const commentsList = document.querySelector('.commentsList');
 
             submitButton.addEventListener('submit', (e) => {
               e.preventDefault();
@@ -66,10 +67,10 @@ const popUpFunction = (commentButton) => {
               }
               name.value = '';
               insights.value = '';
+              comments.displayComments(commentsList, itemId);
             });
-            comments.displayComments();
+            comments.displayComments(commentsList, itemId);
           },
-
         );
       };
       getName();

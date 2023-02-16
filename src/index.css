@@ -35,6 +35,7 @@
 main {
   min-height: calc(100vh - 4rem);
   justify-content: center;
+  display: grid;
 }
 
 .section-container {
@@ -147,4 +148,9 @@ main {
 
 .formContainer {
   list-style-type: none;
+}
+
+.item-count {
+  text-align: center;
+  text-transform: capitalize;
 }

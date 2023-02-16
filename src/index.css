@@ -153,4 +153,5 @@ main {
 .item-count {
   text-align: center;
   text-transform: capitalize;
+  width: 100%;
 }

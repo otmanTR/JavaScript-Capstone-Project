@@ -3,7 +3,7 @@
 babel.config.js
 node_modules
 main.js
-postItem.js
+postItems.js
 popUpFunction.js
 getPokemon.js
 getItems.js
@@ -13,3 +13,4 @@ createLike.js
 comments.js
 addComment.js
 index.js
+index.css

@@ -1,5 +1,5 @@
 import getItems from './getItems';
-
+import countComment from '../counterComment';
 class Comments {
   constructor() {
     this.url = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/Kumd2xEuWrRQPQTt2JCG/comments';
@@ -27,7 +27,7 @@ class Comments {
     });
   };
 
-  displayComments = async (commentList, itemId) => {
+  displayComments = async (commentList, itemId,commentsCount) => {
     const commentsUrl = `https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/Kumd2xEuWrRQPQTt2JCG/comments?item_id=${itemId}`;
     getItems(commentsUrl).then((data) => {
       if (!data.error) {
@@ -38,6 +38,8 @@ class Comments {
        `)
           .join('');
         commentList.innerHTML = content;
+        commentsCount.innerHTML = `Comments  (${countComment(commentList.children)}) `;
+
       }
     });
   };

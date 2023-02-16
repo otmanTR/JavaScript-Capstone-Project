@@ -1,5 +1,6 @@
 import getItems from './getItems';
 import Comments from './comments';
+import countComment from '../counterComment';
 
 const popUp = document.querySelector('.popUp');
 popUp.innerHTML = '';
@@ -35,7 +36,7 @@ const popUpFunction = (commentButton) => {
 :${data.base_experience}</li>
 </ul>
 </div> 
-<h3 class="commentsCount">Comments(4)</h3>
+<h3 class="commentsCount">Comments()</h3>
 <ul class="commentsList"></ul>
 <form class="commentForm">
 <h2 class="formTitle">Add a comment</h2>
@@ -54,6 +55,7 @@ const popUpFunction = (commentButton) => {
             popUp.innerHTML = popUpItems;
             const itemId = data.name;
 
+            const commentsCount = document.querySelector(".commentsCount");
             const comments = new Comments();
             const submitButton = document.querySelector('.commentForm');
             const commentsList = document.querySelector('.commentsList');
@@ -67,9 +69,10 @@ const popUpFunction = (commentButton) => {
               }
               name.value = '';
               insights.value = '';
-              comments.displayComments(commentsList, itemId);
+              comments.displayComments(commentsList, itemId,commentsCount);
             });
-            comments.displayComments(commentsList, itemId);
+            comments.displayComments(commentsList, itemId,commentsCount);
+            //commentsCount.innerHTML = countComment(commentsList.children);
           },
         );
       };

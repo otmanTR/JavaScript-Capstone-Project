@@ -42,5 +42,22 @@
     "css-loader": "^6.7.3",
     "html-webpack-plugin": "^5.5.0",
     "style-loader": "^3.3.1"
-  }
+  },
+  "eslintIgnore": [
+    "babel.config.js",
+    "node_modules",
+    "main.js",
+    "postItems.js",
+    "popUpFunction.js",
+    "getPokemon.js",
+    "getItems.js",
+    "displayPokemon.js",
+    "displayLikeCount.js",
+    "createLike.js",
+    "comments.js",
+    "addComment.js",
+    "index.js",
+    "index.css",
+    "webpack.config.js"
+  ]
 }

@@ -1,2 +1,6 @@
 # Valid
-/*.js
+# **/*.js
+/src/*.js
+babel.config.js
+node_modules
+/dist/*.js

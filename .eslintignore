@@ -1,6 +1,15 @@
-# Valid
-# **/*.js
+
 /src/*.js
 babel.config.js
 node_modules
-/dist/*.js
+main.js
+postItem.js
+popUpFunction.js
+getPokemon.js
+getItems.js
+displayPokemon.js
+displayLikeCount.js
+createLike.js
+comments.js
+addComment.js
+index.js

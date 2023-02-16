@@ -1,9 +1,8 @@
 import createLike from './createLike';
 import displayLikeCount from './displayLikeCount';
-import { displayItemCount } from './getItemCount';
 import popUpFunction from './popUpFunction';
 
-const itemCount = document.querySelector('.item-count');
+// const itemCount = document.querySelector('.item-count');
 const pokemonContainer = document.querySelector('.pokemon-container');
 const displayPokemon = (list) => {
   const pokemonlist = list
@@ -44,6 +43,5 @@ const displayPokemon = (list) => {
   popUpFunction(commentButton);
   createLike(likeButton, likeCount);
   displayLikeCount(likeCount);
-  displayItemCount(itemCount, list);
 };
 export default displayPokemon;

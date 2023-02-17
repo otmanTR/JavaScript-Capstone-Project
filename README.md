@@ -28,7 +28,6 @@
 # 📖 JavaScript Capstone Project <a name="about-project"></a>
 
 
-
 **JavaScript Capstone Project is a project which you can see pokemons, you can like and make comments any pokemon which you choose**
 
 ## 🛠 Built With<a name="built-with"></a>

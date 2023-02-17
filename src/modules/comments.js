@@ -17,7 +17,7 @@ class Comments {
   };
 
   displayComments = async (commentList, itemId,commentsCount) => {
-    const commentsUrl = `https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/Kumd2xEuWrRQPQTt2JCG/comments?item_id=${itemId}`;
+    const commentsUrl = `https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/B4dSeq5fl0y4n8s59SaR/comments?item_id=${itemId}`;
     getItems(commentsUrl).then((data) => {
       if (!data.error) {
         commentList.classList.add('show');

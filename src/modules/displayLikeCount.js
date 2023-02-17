@@ -1,6 +1,6 @@
 import getItems from './getItems';
 
-const baseUrl = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/Kumd2xEuWrRQPQTt2JCG/likes/';
+const baseUrl = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/B4dSeq5fl0y4n8s59SaR/likes/';
 const displayLikeCount = async (likeContainer) => {
   const data = await getItems(baseUrl);
   likeContainer.forEach((container) => {

@@ -1,7 +1,7 @@
 import displayLikeCount from './displayLikeCount';
 import postData from './postItems';
 
-const url = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/Kumd2xEuWrRQPQTt2JCG/likes/';
+const url = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/B4dSeq5fl0y4n8s59SaR/likes/';
 const createLike = (likeBtns, likeCount) => {
   likeBtns.forEach((btn) => {
     btn.addEventListener('click', async (e) => {

@@ -5,17 +5,6 @@ class Comments {
     this.url = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/Kumd2xEuWrRQPQTt2JCG/comments';
   }
 
-  apiFetch = async () => {
-    const request = new Request(this.url);
-    const result = await fetch(request);
-    const fResult = await result.json();
-    // const allComments = fResult.result.map(({ user: name, insights }) => ({
-    //   name,
-    //   insights,
-    // }));
-    // console.log('comments here', allComments);
-    return fResult;
-  };
 
   addNewComment = async (itemId, username, comment) => {
     await fetch(this.url, {

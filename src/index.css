@@ -27,6 +27,11 @@
   margin-top: 50px;
 }
 
+footer {
+  display: flex;
+  justify-content: center;
+}
+
 .footer-text {
   text-transform: capitalize;
   text-align: center;
@@ -94,6 +99,8 @@ main {
 
 .popUpProperties {
   text-transform: capitalize;
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 
 .close {
@@ -157,4 +164,20 @@ main {
 .item-count {
   text-align: center;
   text-transform: capitalize;
+}
+
+.imageSize {
+  height: 200px;
+}
+
+.liItem {
+  margin: 5px 5px 5px 5px;
+}
+
+.commentsCount {
+  margin-bottom: 10px;
+}
+
+.formItems {
+  margin: 5px 0 5px 0;
 }

@@ -18,7 +18,7 @@ const popUpFunction = (commentButton) => {
         getItems(`https://pokeapi.co/api/v2/pokemon/${pokemonId}`).then(
           (data) => {
             const popUpItems = `<div class="popUpImage">
-<img
+<img class="imageSize"
   src="${data.sprites.other['official-artwork'].front_default}"
   name="${data.name}"
   alt="${data.name}"
@@ -29,10 +29,10 @@ const popUpFunction = (commentButton) => {
 </div>
 <div class="popUpProperties">
 <ul>
-  <li class="type">Type : ${data.types[0].type.name}</li>
-  <li class="weight">Weight:${data.weight}</li>
-  <li class="height">Heigth:${data.height}</li>
-  <li class="power">baseexperience
+  <li class="liItem">Type : ${data.types[0].type.name}</li>
+  <li class="liItem">Weight:${data.weight}</li>
+  <li class="liItem">Heigth:${data.height}</li>
+  <li class="liItem">baseexperience
 :${data.base_experience}</li>
 </ul>
 </div> 
@@ -42,13 +42,13 @@ const popUpFunction = (commentButton) => {
 <h2 class="formTitle">Add a comment</h2>
 <ul class="formContainer">
   <li>
-    <input minlength="1" maxlength="30" class="name" type="text" name="name" placeholder="Your name" required/>
+    <input minlength="1" maxlength="30" class="formItems" type="text" name="name" placeholder="Your name" required/>
   </li>
   <li>
-    <input minlength="1" maxlength="150" class="insights" type="text" name="insights" placeholder="Your insights" required/>
+    <input minlength="1" maxlength="150" class="formItems" type="text" name="insights" placeholder="Your insights" required/>
   </li>
   <li>
-    <button class="submitButton button" type="submit">Comment</button>
+    <button class="submitButton button formItems" type="submit">Comment</button>
   </li>
 </ul>
 </form>`;
@@ -60,19 +60,18 @@ const popUpFunction = (commentButton) => {
             const submitButton = document.querySelector('.commentForm');
             const commentsList = document.querySelector('.commentsList');
 
-            submitButton.addEventListener('submit', (e) => {
+            submitButton.addEventListener('submit', async (e) => {
               e.preventDefault();
               const name = document.querySelector('.name');
               const insights = document.querySelector('.insights');
               if (name.value !== '' && insights.value !== '') {
-                comments.addNewComment(itemId, name.value, insights.value);
+                await comments.addNewComment(itemId, name.value, insights.value);
               }
               name.value = '';
               insights.value = '';
-              comments.displayComments(commentsList, itemId,commentsCount);
+              await comments.displayComments(commentsList, itemId,commentsCount);
             });
             comments.displayComments(commentsList, itemId,commentsCount);
-            //commentsCount.innerHTML = countComment(commentsList.children);
           },
         );
       };

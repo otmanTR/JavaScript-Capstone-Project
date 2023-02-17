@@ -59,7 +59,7 @@
 ## 🚀 Live Demo <a name="live-demo"></a>
 
 
-[Live Demo](url:https://otmantr.github.io/JavaScript-Capstone-Project/dist/)
+[Live Demo](https://otmantr.github.io/JavaScript-Capstone-Project/dist/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 

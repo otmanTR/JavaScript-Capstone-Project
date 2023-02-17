@@ -27,14 +27,8 @@
   margin-top: 50px;
 }
 
-footer {
-  display: flex;
-  justify-content: center;
-}
-
 .footer-text {
   text-transform: capitalize;
-  text-align: center;
 }
 
 main {

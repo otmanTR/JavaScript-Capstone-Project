@@ -141,6 +141,7 @@ main {
 
 .containerPopUp {
   background-color: rgb(175, 220, 219);
+  min-height: 100%;
 }
 
 .like-btn {

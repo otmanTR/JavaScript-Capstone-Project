@@ -23,7 +23,7 @@ class Comments {
         commentList.classList.add('show');
         const content = data
           .map((element) => `
-        <li class="scoreItem">${element.username} <span>: <span>${element.comment}</li>
+        <li class="scoreItem">${element.creation_date}<span>: <span>${element.username} <span>: <span>${element.comment}</li>
        `)
           .join('');
         commentList.innerHTML = content;

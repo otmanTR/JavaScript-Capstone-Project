@@ -42,13 +42,13 @@ const popUpFunction = (commentButton) => {
 <h2 class="formTitle">Add a comment</h2>
 <ul class="formContainer">
   <li>
-    <input minlength="1" maxlength="30" class="formItems" type="text" name="name" placeholder="Your name" required/>
+    <input minlength="1" maxlength="30" class="name formItems" type="text" name="name" placeholder="Your name" required/>
   </li>
   <li>
-    <input minlength="1" maxlength="150" class="formItems" type="text" name="insights" placeholder="Your insights" required/>
+    <input minlength="1" maxlength="150" class="insights formItems" type="text" name="insights" placeholder="Your insights" required/>
   </li>
   <li>
-    <button class="submitButton button formItems" type="submit">Comment</button>
+    <button class="submitButton button" type="submit">Comment</button>
   </li>
 </ul>
 </form>`;

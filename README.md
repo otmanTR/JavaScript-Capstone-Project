@@ -146,7 +146,6 @@ we would like to thank for Microverse and Pokemon API to provide us learning mat
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-
 ## 📝 License <a name="license"></a>
 This project is [MIT](./MIT.md) licensed.
 <p align="right">(<a href="#readme-top">back to top</a>)</p>

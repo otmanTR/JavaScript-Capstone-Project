@@ -165,6 +165,7 @@ main {
 .item-count {
   text-align: center;
   text-transform: capitalize;
+  text-decoration: underline;
 }
 
 .imageSize {
@@ -181,4 +182,9 @@ main {
 
 .formItems {
   margin: 5px 0 5px 0;
+}
+
+.poke-info {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
 }

@@ -28,7 +28,7 @@ const popUpFunction = (commentButton) => {
 <h2>${data.name}</h2>
 </div>
 <div class="popUpProperties">
-<ul>
+<ul class ="poke-info">
   <li class="liItem">Type : ${data.types[0].type.name}</li>
   <li class="liItem">Weight:${data.weight}</li>
   <li class="liItem">Heigth:${data.height}</li>
@@ -55,7 +55,7 @@ const popUpFunction = (commentButton) => {
             popUp.innerHTML = popUpItems;
             const itemId = data.name;
 
-            const commentsCount = document.querySelector(".commentsCount");
+            const commentsCount = document.querySelector('.commentsCount');
             const comments = new Comments();
             const submitButton = document.querySelector('.commentForm');
             const commentsList = document.querySelector('.commentsList');
@@ -65,14 +65,22 @@ const popUpFunction = (commentButton) => {
               const name = document.querySelector('.name');
               const insights = document.querySelector('.insights');
               if (name.value !== '' && insights.value !== '') {
-                await comments.addNewComment(itemId, name.value, insights.value);
+                await comments.addNewComment(
+                  itemId,
+                  name.value,
+                  insights.value
+                );
               }
               name.value = '';
               insights.value = '';
-              await comments.displayComments(commentsList, itemId,commentsCount);
+              await comments.displayComments(
+                commentsList,
+                itemId,
+                commentsCount
+              );
             });
-            comments.displayComments(commentsList, itemId,commentsCount);
-          },
+            comments.displayComments(commentsList, itemId, commentsCount);
+          }
         );
       };
       getName();

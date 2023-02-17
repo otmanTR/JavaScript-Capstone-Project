@@ -1,12 +1,21 @@
-import countComment from "../counterComment";
+import countComment from '../counterComment';
 
-describe("testing count comment", () => {
+describe('testing count comment', () => {
+  test('Counting comments', () => {
+    let commentList = [];
+    commentList.push('BA');
 
+    expect(countComment(commentList)).toBe(1);
+  });
+  test('Counting comments', () => {
+    let commentList = [];
 
-test("Counting comments", () => {
-   let commentList = [];
-   commentList.push("BA");
-    
-    expect(countComment(commentList)).toBe(1) 
-})
-})
+    expect(countComment(commentList)).toBe(0);
+  });
+  test('Counting comments', () => {
+    let commentList = [];
+    commentList.push('BA');
+    commentList.push('BA');
+    expect(countComment(commentList)).toBe(2);
+  });
+});

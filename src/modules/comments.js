@@ -2,7 +2,7 @@ import getItems from './getItems';
 import countComment from '../counterComment';
 class Comments {
   constructor() {
-    this.url = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/Kumd2xEuWrRQPQTt2JCG/comments';
+    this.url = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/B4dSeq5fl0y4n8s59SaR/comments';
   }
 
 
